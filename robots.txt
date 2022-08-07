@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+Disallow: /id/categories/
+Disallow: /id/tags/
+Disallow: /en/categories/
+Disallow: /en/tags/
+
+Sitemap: https://fncolon.github.io/sitemap.xml
