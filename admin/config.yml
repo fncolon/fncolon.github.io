@@ -14,9 +14,13 @@ collections:
     label: "Posts"
     folder: "content/posts"
     create: true
+    # https://www.netlifycms.org/docs/beta-features/#nested-collections
+    nested:
+      depth: 100
+      summary: '{{title}}' # optional summary for a tree node, defaults to the inferred title field
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Slub", name: "slug", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string" }
       - { label: "Date", name: "date", widget: "date" }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Featured Image", name: "image", widget: "image"}
