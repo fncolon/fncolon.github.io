@@ -21,4 +21,4 @@ collections:
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Featured Image", name: "image", widget: "image"}
       - { label: "Description", name: "description", widget: "string"}
-      - { label: "Draft", name: "description", widget: "boolean"}
+      - { label: "Draft", name: "draft", widget: "boolean"}
