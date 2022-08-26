@@ -10,9 +10,10 @@ media_folder: "static/images/uploads" # Media files will be stored in the repo u
 public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
 
 collections:
-  - name: "posts"
-    label: "Posts"
+  - label: "Blog in ID"
+    name: "posts"
     folder: "content/posts"
+    filter: {field: "language", value: "id"}
     create: true
     # https://www.netlifycms.org/docs/beta-features/#nested-collections
     nested:
@@ -22,8 +23,25 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Slug", name: "slug", widget: "string" }
       - { label: "Date", name: "date", widget: "date" }
-      - { label: "Body", name: "body", widget: "markdown" }
-      - { label: "Featured Image", name: "image", widget: "image"}
       - { label: "Description", name: "description", widget: "string"}
       - { label: "Draft", name: "draft", widget: "boolean"}
-    meta: { path: { widget: string, label: 'Path', index_file: 'index' } }
+      - { label: "Body", name: "body", widget: "markdown" }
+    meta: { path: { widget: string, label: 'Path', index_file: 'index.id' } }
+  
+  - label: "Blog in En"
+    name: "posts"
+    folder: "content/posts"
+    filter: {field: "language", value: "id"}
+    create: true
+    # https://www.netlifycms.org/docs/beta-features/#nested-collections
+    nested:
+      depth: 100
+      # summary: '{{title}}' # optional summary for a tree node, defaults to the inferred title field
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Date", name: "date", widget: "date" }
+      - { label: "Description", name: "description", widget: "string"}
+      - { label: "Draft", name: "draft", widget: "boolean"}
+      - { label: "Body", name: "body", widget: "markdown" }
+    meta: { path: { widget: string, label: 'Path', index_file: 'index.en' } }
