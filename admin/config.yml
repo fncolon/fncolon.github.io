@@ -11,7 +11,7 @@ public_folder: "/images/uploads" # The src attribute for uploaded media will beg
 
 collections:
   - label: "Blog in ID"
-    name: "posts"
+    name: "posts_id"
     folder: "content/posts"
     filter: {field: "language", value: "id"}
     create: true
@@ -29,7 +29,7 @@ collections:
     meta: { path: { widget: string, label: 'Path', index_file: 'index.id' } }
   
   - label: "Blog in En"
-    name: "posts"
+    name: "posts_en"
     folder: "content/posts"
     filter: {field: "language", value: "id"}
     create: true
