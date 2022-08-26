@@ -10,10 +10,9 @@ media_folder: "static/images/uploads" # Media files will be stored in the repo u
 public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
 
 collections:
-  - label: "Blog in ID"
-    name: "posts_id"
+  - label: "Blog Posts"
+    name: "posts"
     folder: "content/posts"
-    filter: {field: "language", value: "id"}
     create: true
     # https://www.netlifycms.org/docs/beta-features/#nested-collections
     nested:
@@ -31,7 +30,6 @@ collections:
   - label: "Blog in En"
     name: "posts_en"
     folder: "content/posts"
-    filter: {field: "language", value: "id"}
     create: true
     # https://www.netlifycms.org/docs/beta-features/#nested-collections
     nested:
