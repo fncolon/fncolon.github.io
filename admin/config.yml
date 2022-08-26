@@ -14,7 +14,7 @@ collections:
     name: "posts"
     folder: "content/posts"
     #filter: {field: "language", value: "en"}
-    filter: {index_file: 'index.id'}
+    filter: {meta: path: {index_file: 'index.id'}}
     create: true
     # https://www.netlifycms.org/docs/beta-features/#nested-collections
     nested:
